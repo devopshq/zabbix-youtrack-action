@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>3.0</version>
+    <date>2016-07-30T03:21:19Z</date>
+    <groups>
+        <group>
+            <name>Profiles.DevOps</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>Profile.DevOps.ZabbixServer.ALL</template>
+            <name>Profile.DevOps.ZabbixServer.ALL</name>
+            <description>WIKI: https://wiki.ptsecurity.com/x/nplIAQ&#13;
+Profile WIKI: https://wiki.ptsecurity.com/x/cACrAQ</description>
+            <groups>
+                <group>
+                    <name>Profiles.DevOps</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>PT</name>
+                </application>
+            </applications>
+            <items>
+                <item>
+                    <name>Error in /var/log/zabbix/PtZabbixAlertYTWorkflow.log</name>
+                    <type>0</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>zabbix_server_ptzabbixalertytworkflow.py</key>
+                    <delay>60</delay>
+                    <history>90</history>
+                    <trends>365</trends>
+                    <status>0</status>
+                    <value_type>3</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>PT</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>0 FAIL / 1 OK</name>
+                    </valuemap>
+                    <logtimefmt/>
+                </item>
+            </items>
+            <discovery_rules/>
+            <macros/>
+            <templates/>
+            <screens/>
+        </template>
+    </templates>
+    <triggers>
+        <trigger>
+            <expression>{Profile.DevOps.ZabbixServer.ALL:zabbix_server_ptzabbixalertytworkflow.py.last()}=0</expression>
+            <name>Error in /var/log/zabbix/PtZabbixAlertYTWorkflow.log</name>
+            <url/>
+            <status>0</status>
+            <priority>4</priority>
+            <description>Profile WIKI: https://wiki.ptsecurity.com/x/cACrAQ</description>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+    </triggers>
+    <value_maps>
+        <value_map>
+            <name>0 FAIL / 1 OK</name>
+            <mappings>
+                <mapping>
+                    <value>0</value>
+                    <newvalue>FAIL</newvalue>
+                </mapping>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>OK</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+    </value_maps>
+</zabbix_export>
