@@ -1,4 +1,7 @@
 # zabbix-youtrack-action
+
+[![zabbix-youtrack-action code quality](https://api.codacy.com/project/badge/Grade/2feeafefcc8b4873ba7fcf99b5f69f44)](https://www.codacy.com/app/tim55667757/zabbix-youtrack-action/dashboard)
+
 Create issue in Youtrack from Zabbix
 + Create issue in Youtrack
 + Send link to this issue to Zabbix acknowledge
